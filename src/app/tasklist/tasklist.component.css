@@ -1,0 +1,65 @@
+
+em {
+    font-style: normal;
+}
+ .listview {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    list-style-type: none;
+    overflow: hidden;
+    overflow-y: auto;
+}
+.listview-item {
+    display: flex;
+    color: gray;
+    cursor: pointer;
+    margin: 0;
+    padding: 8px;
+    -webkit-user-select: none;
+    user-select: none;
+    align-items: center;
+    background-color: white;
+    border: none;
+    border-bottom: solid 1px rgba(0,0,0,0.08);
+    transition: all 0.3s ease-out;        
+}
+.icon {
+    width: 2rem;
+    height: 2rem;
+    margin: 0.5em;
+    -webkit-user-select: none;
+    user-select: none;
+}
+.title {
+    flex:1;
+    margin: 0;
+    padding: 0 1em 0 0;
+    color: gray;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 0.8rem;
+}
+.name {
+    overflow:hidden;
+    padding: 4px 0;
+    text-overflow:ellipsis;
+}
+.status {
+    padding: 4px 0;
+}
+.o-bar {
+    width:100%;
+    border-radius: 4px;
+    overflow: hidden;
+    background-color: silver;
+  }
+.o-bar .o-bar-inner {
+    height: 5px;
+    background-color:green;
+    transition: all 0.3s ease-out;
+}

@@ -1,0 +1,51 @@
+
+<style>
+  :host {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 14px;
+    color: #333;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  em {
+    font-style: normal;
+  }
+  .box {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header {
+    width:100%;
+  }
+  .listview {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    overflow:hidden;
+  }
+  /* Responsive Styles */
+  @media screen and (max-width: 767px) {
+  }
+
+  @media screen and (max-width: 575px) {
+  }
+</style>
+
+<div class="box">
+  <app-header class="header" title="文件分享服务" (menuclick)="select()" (reload)="reload()"></app-header>
+  <app-tasklist class="listview"  [items]="share.tasks" *ngIf="share.tasks.length"></app-tasklist>
+  <app-listview class="listview"  [items]="share.items" (itemclick)="showitem($event)" *ngIf="share.tasks.length==0"></app-listview>
+</div>
