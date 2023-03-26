@@ -45,12 +45,14 @@ em {
     font-size: 0.8rem;
 }
 .name {
+    margin: 0;
     overflow:hidden;
-    padding: 4px 0;
+    padding: 2px 0;
     text-overflow:ellipsis;
 }
 .status {
-    padding: 4px 0;
+    margin: 0;
+    padding: 2px 0;
 }
 .o-bar {
     width:100%;
