@@ -46,13 +46,15 @@ em {
 }
 .name {
     margin: 0;
+    padding: 0;
+    height: 1.618em;
     overflow:hidden;
-    padding: 2px 0;
     text-overflow:ellipsis;
 }
 .status {
     margin: 0;
-    padding: 2px 0;
+    padding: 0;
+    height: 1.618em;
 }
 .o-bar {
     width:100%;
