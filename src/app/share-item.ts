@@ -25,6 +25,11 @@ interface FileItem {
     data: string;
 }
 
+interface Echo{
+    "ret": boolean;
+    "echo": string;
+}  
+
 const mimes  = new Map<string, string>();
 
 mimes.set("txt", "/woo/common/mime/text.svg");
@@ -76,4 +81,4 @@ let ShowIcon = (ext: string):string =>{
     return SHARE_HOST + (mimes.get(ext)|| "/woo/common/mime/unknown.svg");
 }
 
-export { ShareItem, ShareList, FileItem, ShowIcon }
+export { ShareItem, ShareList, FileItem, ShowIcon, Echo }

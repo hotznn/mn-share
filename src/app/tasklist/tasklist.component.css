@@ -28,14 +28,14 @@ em {
 .icon {
     width: 2rem;
     height: 2rem;
-    margin: 0.5em;
+    margin: 0.5em 1em;
     -webkit-user-select: none;
     user-select: none;
 }
 .title {
     flex:1;
     margin: 0;
-    padding: 0 1em 0 0;
+    padding-right: 8px;
     color: gray;
     display: flex;
     width: 100%;
@@ -47,6 +47,7 @@ em {
 .name {
     margin: 0;
     padding: 0;
+    font-size: 1rem;
     height: 1.5em;
     overflow:hidden;
     text-overflow:ellipsis;
@@ -54,13 +55,15 @@ em {
 .status {
     margin: 0;
     padding: 0;
+    color: silver;
+    font-size: 0.7rem;
     height: 1.5em;
 }
 .o-bar {
     width:100%;
     border-radius: 4px;
     overflow: hidden;
-    margin: 8px 0;
+    margin-top: 8px;
     background-color: silver;
   }
 .o-bar .o-bar-inner {

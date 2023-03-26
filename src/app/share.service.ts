@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Share, SHARE_HOST } from "../services";
-import { ShareItem, ShareList, FileItem } from './share-item';
+import { ShareItem, ShareList, FileItem, Echo } from './share-item';
 
 @Injectable({
   providedIn: 'root'
@@ -37,12 +37,21 @@ class ShareService {
         item.status = "等待服务器处理";
       }
     })
-    .then(()=>{
-      let idx = this.tasks.indexOf(item);
-      if(idx>-1){
-        this.tasks.splice(idx, 1);
+    .then((o)=>{
+      let rowid = (o as Echo).echo;
+      if(rowid){
+        item.status = "上传成功";
       }
-      this.load(this.listname);
+      else {
+        item.status = "上传失败";
+      }      
+      setTimeout(()=>{
+        let idx = this.tasks.indexOf(item);
+        if(idx>-1){
+          this.tasks.splice(idx, 1);
+        }
+        this.load(this.listname);  
+      },1500);
     });
   }
 }
