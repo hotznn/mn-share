@@ -18,8 +18,8 @@ export class ListviewComponent {
       console.log(item);
     }
 
-    showicon(ext: string):string{
-      return ShowIcon(ext);
+    showicon(ext: string, id: string):string{
+      return ShowIcon(ext, id);
     }
 
     showsize(size:number):string{

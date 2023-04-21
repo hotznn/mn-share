@@ -77,7 +77,10 @@ mimes.set("pptx", "/woo/common/mime/ppt.svg");
 mimes.set("xls", "/woo/common/mime/xls.svg");
 mimes.set("xlsx", "/woo/common/mime/xls.svg");
 
-let ShowIcon = (ext: string):string =>{
+let ShowIcon = (ext: string, id: string):string =>{
+    if(id && ("jpg,jpeg,png,gif,bmp".indexOf(ext)>-1) ){
+      return  SHARE_HOST + "/share/thumbnail.do?rowid="  + id; 
+    }
     return SHARE_HOST + (mimes.get(ext)|| "/woo/common/mime/unknown.svg");
 }
 

@@ -1,6 +1,6 @@
 <ul class="listview">
     <li class="listview-item" *ngFor="let item of items" (click)="onitemclick(item)">
-        <img class="icon" [src]="showicon(item.ext)" alt="avatar" />
+        <img class="icon" [src]="showicon(item.ext, item.rowid)" alt="avatar" />
         <p class="title">
             <em>{{item.name}}.{{item.ext}}</em><br>
             <small>大小：{{showsize(item.size)}},  有效期：{{item.rank}} 分钟</small>    

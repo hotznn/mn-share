@@ -7,8 +7,8 @@ import {  FileItem, ShowIcon } from '../share-item';
 })
 export class TasklistComponent {
   @Input() items: FileItem[] = [];
-  showicon(ext: string):string{
-    return ShowIcon(ext);
+  showicon(ext: string, id: string):string{
+    return ShowIcon(ext, id);
   }
   percent(item: FileItem): string {
     return Math.floor(((item.loaded/item.total))*100) + '%'
