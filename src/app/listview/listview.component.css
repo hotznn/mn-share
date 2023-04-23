@@ -33,7 +33,9 @@ em {
 .listview-item .icon {
   width: 48px;
   height: 48px;
-  padding: 8px;
+  padding: 0;
+  overflow: hidden;
+  border-radius: 5px;
 }
 .listview-item .title {
   flex: 1;
