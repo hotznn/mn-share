@@ -36,6 +36,7 @@ em {
   padding: 0;
   overflow: hidden;
   border-radius: 5px;
+  object-fit: cover;
 }
 .listview-item .title {
   flex: 1;
